@@ -1,0 +1,69 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: #161616;
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .highlight {
+    color: #FF3F3A;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .navLinks li {
+    font-size: 16px;
+  }
+  
+  .navLinks li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .navLinks li a:hover {
+    color: #FF3F3A;
+  }
+  
+  .rightMenu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .consultationButton {
+    background: #FF3F3A;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .consultationButton:hover {
+    background: #D8322E;
+  }
+  
+  .authLink {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  

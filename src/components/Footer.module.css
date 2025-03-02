@@ -1,0 +1,61 @@
+.footer {
+    background: #161616;
+    color: white;
+    padding: 50px 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .brand {
+    max-width: 300px;
+  }
+  
+  .brand h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .highlight {
+    color: #FF3F3A;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .socialIcons i {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .socialIcons i:hover {
+    color: #FF3F3A;
+  }
+  
+  .links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .links ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .links ul li a:hover {
+    color: #FF3F3A;
+  }
+  
+  .contacts p {
+    margin: 5px 0;
+  }  

@@ -1,0 +1,29 @@
+.homepage {
+    background: linear-gradient(180deg, #FFD3C2 0%, #FFFFFF 100%);
+    padding: 100px;
+    text-align: center;
+  }
+  
+  .hero {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .hero h1 {
+    font-size: 40px;
+    color: #161616;
+  }
+  
+  .exploreButton {
+    background: #FF3F3A;
+    border: none;
+    padding: 12px 24px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .exploreButton:hover {
+    background: #D8322E;
+  }  
