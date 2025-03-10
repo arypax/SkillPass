@@ -1,61 +1,128 @@
 .footer {
-    background: #161616;
-    color: white;
-    padding: 50px 80px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .brand {
-    max-width: 300px;
-  }
-  
-  .brand h2 {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .highlight {
-    color: #FF3F3A;
-  }
-  
-  .socialIcons {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .socialIcons i {
-    font-size: 20px;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  
-  .socialIcons i:hover {
-    color: #FF3F3A;
-  }
-  
-  .links ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .links ul li a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-  }
-  
-  .links ul li a:hover {
-    color: #FF3F3A;
-  }
-  
-  .contacts p {
-    margin: 5px 0;
-  }  
+  background: #161616;
+  color: white;
+  padding: 10px 80px;
+  padding-bottom: 0px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.brand {
+  max-width: 300px;
+}
+
+.brand h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #ff3f3a;
+}
+
+.brand p {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.socialIcons i {
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.socialIcons i:hover {
+  color: #ff3f3a;
+}
+
+.links h3,
+.contacts h3,
+.newsletter h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.links ul li a:hover {
+  color: #ff3f3a;
+}
+
+.contacts p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.newsletter form {
+  display: flex;
+  gap: 5px;
+}
+
+.newsletter input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  background: #222;
+  color: white;
+  flex: 1;
+}
+
+.newsletter button {
+  background: #ff3f3a;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: white;
+}
+
+.newsletter button:hover {
+  background: #d8322e;
+}
+
+.subscribeText {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding: 15px 0;
+  font-size: 12px;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toTop {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.toTop:hover {
+  color: #ff3f3a;
+}

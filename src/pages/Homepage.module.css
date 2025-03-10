@@ -1,29 +1,337 @@
+/* Основной фон */
 .homepage {
-    background: linear-gradient(180deg, #FFD3C2 0%, #FFFFFF 100%);
-    padding: 100px;
-    text-align: center;
-  }
-  
-  .hero {
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  .hero h1 {
-    font-size: 40px;
-    color: #161616;
-  }
-  
-  .exploreButton {
-    background: #FF3F3A;
-    border: none;
-    padding: 12px 24px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .exploreButton:hover {
-    background: #D8322E;
-  }  
+  background: linear-gradient(180deg, #ffd3c2 0%, #ffffff 100%);
+  padding: 60px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.heroText {
+  max-width: 600px;
+  text-align: left;
+}
+
+.heroText h1 {
+  font-size: 48px;
+  color: #161616;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.heroText p {
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.showreel {
+  color: #ff3f3a;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.showreel::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.heroImage img {
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.outlineButton, .primaryButton {
+  font-size: 16px;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.outlineButton {
+  background: none;
+  border: 2px solid #ff3f3a;
+  color: #ff3f3a;
+}
+
+.outlineButton:hover {
+  background: #ff3f3a;
+  color: white;
+}
+
+.primaryButton {
+  background: #ff3f3a;
+  color: white;
+  border: none;
+}
+
+.primaryButton:hover {
+  background: #d8322e;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 20px 0;
+  background: #fff3ec;
+  border-radius: 10px;
+  max-width: 1100px;
+  margin: auto;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stats div {
+  flex: 1;
+  padding: 20px;
+}
+
+.stats h2 {
+  font-size: 32px;
+  color: #161616;
+  font-weight: bold;
+}
+
+.stats p {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Why SkillPass? */
+.whySkillPass {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.textContent {
+  max-width: 450px;
+}
+
+.textContent h3 {
+  color: #ff3f3a;
+  font-size: 18px;
+}
+
+.textContent h2 {
+  font-size: 36px;
+  color: #161616;
+  margin-top: 0;
+}
+
+.textContent ul {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.textContent li {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.textContent li::before {
+  content: '\2714'; /* Checkmark */
+  color: #ff3f3a;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Featured Courses */
+.featuredCourses {
+  text-align: center;
+}
+
+.courseGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.courseCard {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.courseCard:hover {
+  transform: translateY(-5px);
+}
+
+.courseImage {
+  width: 30%;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.courseImage img {
+  width: 100%;
+  height: auto;
+}
+
+.courseContent {
+  padding: 15px;
+  width: 70%;
+  text-align: left;
+}
+
+.category {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.marketing {
+  background: #20c997;
+}
+
+.hr {
+  background: #ff9f1c;
+}
+
+.management {
+  background: #3366ff;
+}
+
+.design {
+  background: #ff3f3a;
+}
+
+.courseContent h3 {
+  font-size: 18px;
+  color: #161616;
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff3f3a;
+}
+
+.price span {
+  color: #777;
+  font-weight: normal;
+}
+
+/* Events */
+.events {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.eventList {
+  max-width: 900px;
+  margin: auto;
+}
+
+.eventItem {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+/* Certificate */
+.certificate {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.certImage img {
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* Meet Our Team */
+.team {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.teamGrid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Testimonials */
+.testimonials {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.testimonial {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog */
+.blog {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.infoImage {
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.infoImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+}

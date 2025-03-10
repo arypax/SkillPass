@@ -1,63 +1,66 @@
-.navbar {
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px;
+    padding: 10px 80px;
     background: #161616;
     color: white;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
-  
+
   .logo {
     font-size: 24px;
     font-weight: bold;
     color: white;
+    text-decoration: none;
   }
-  
+
   .highlight {
-    color: #FF3F3A;
+    color: #ff3f3a;
+    text-decoration: none;
   }
-  
+
   .navLinks {
     list-style: none;
     display: flex;
     gap: 30px;
   }
-  
+
   .navLinks li {
     font-size: 16px;
   }
-  
+
   .navLinks li a {
     text-decoration: none;
     color: white;
     transition: color 0.3s;
   }
-  
+
   .navLinks li a:hover {
-    color: #FF3F3A;
+    color: #ff3f3a;
   }
-  
+
   .rightMenu {
     display: flex;
     align-items: center;
     gap: 20px;
   }
-  
+
   .consultationButton {
-    background: #FF3F3A;
+    background: #ff3f3a;
     border: none;
+    border-radius: 20px;
     padding: 10px 20px;
     color: white;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
   }
-  
+
   .consultationButton:hover {
-    background: #D8322E;
+    background: #d8322e;
   }
-  
+
   .authLink {
     color: white;
     text-decoration: none;
@@ -66,4 +69,3 @@
     align-items: center;
     gap: 5px;
   }
-  
