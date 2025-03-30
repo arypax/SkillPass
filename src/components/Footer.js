@@ -13,97 +13,70 @@ const Footer = () => {
           <p>
             SkillPass is a leader in online studying. We have lots of courses
             and programs from the main market experts. We provide relevant
-            approaches to online learning, internships, and employment in the
-            largest companies in the country.
+            approaches to online learning, internships, and employment in the largest
+            companies in the country.
           </p>
           <div className={styles.socialIcons}>
-            <i className="fa-brands fa-facebook"></i>
-            <i className="fa-brands fa-twitter"></i>
-            <i className="fa-brands fa-youtube"></i>
-            <i className="fa-brands fa-telegram"></i>
-            <i className="fa-brands fa-instagram"></i>
-            <i className="fa-brands fa-linkedin"></i>
+            <a href="#"><i className="fab fa-facebook-f"></i></a>
+            <a href="#"><i className="fab fa-twitter"></i></a>
+            <a href="#"><i className="fab fa-telegram"></i></a>
+            <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href="#"><i className="fab fa-linkedin-in"></i></a>
           </div>
         </div>
 
         {/* Карта сайта */}
-        <div className={styles.links}>
-          <h3>Site Map</h3>
+        <div className={styles.siteMap}>
+          <h3>SITE MAP</h3>
           <ul>
-            <li>
-              <a href="/about">About Us</a>
-            </li>
-            <li>
-              <a href="/courses">Courses</a>
-            </li>
-            <li>
-              <a href="/events">Events</a>
-            </li>
-            <li>
-              <a href="/blog">Blog</a>
-            </li>
-            <li>
-              <a href="/contacts">Contacts</a>
-            </li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/courses">Courses</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contacts">Contacts</a></li>
           </ul>
         </div>
 
         {/* Курсы */}
-        <div className={styles.links}>
-          <h3>Courses</h3>
+        <div className={styles.courses}>
+          <h3>COURSES</h3>
           <ul>
-            <li>
-              <a href="/courses#marketing">Marketing</a>
-            </li>
-            <li>
-              <a href="/courses#management">Management</a>
-            </li>
-            <li>
-              <a href="/courses#hr">HR & Recruiting</a>
-            </li>
-            <li>
-              <a href="/courses#design">Design</a>
-            </li>
-            <li>
-              <a href="/courses#development">Development</a>
-            </li>
+            <li><a href="/courses/marketing">Marketing</a></li>
+            <li><a href="/courses/management">Management</a></li>
+            <li><a href="/courses/hr">HR & Recruiting</a></li>
+            <li><a href="/courses/design">Design</a></li>
+            <li><a href="/courses/development">Development</a></li>
           </ul>
         </div>
 
         {/* Контакты */}
-        <div className={styles.contacts}>
-          <h3>Contact Us</h3>
-          <p>📞 +7 (777) 77-77-777</p>
-          <p>✉ skillpass@gmail.com</p>
+        <div className={styles.contact}>
+          <h3>CONTACT US</h3>
+          <p className={styles.phone}>
+            <a href="tel:+77777777777">+7 (777) 77-77-777</a>
+          </p>
+          <p className={styles.email}>
+            <a href="mailto:skillpass@gmail.com">skillpass@gmail.com</a>
+          </p>
         </div>
 
         {/* Форма подписки */}
         <div className={styles.newsletter}>
-          <h3>Sign up to our newsletter</h3>
-          <form>
+          <h3>SIGN UP TO OUR NEWSLETTER</h3>
+          <div className={styles.subscribeForm}>
             <input type="email" placeholder="Email address" />
             <button type="submit">→</button>
-          </form>
+          </div>
           <p className={styles.subscribeText}>
-            *Subscribe to our newsletter to receive communication and early
-            updates from SkillPass.
+            *Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.
           </p>
         </div>
       </div>
 
-      {/* Копирайт и кнопка наверх */}
+      {/* Копирайт */}
       <div className={styles.bottom}>
-        <p>
-          © All rights reserved.
-          <br />
-          Made by Vladislav Pinker and Yerassyl Saginlykov -
-          <br />
-          IT2CCO-2201
-        </p>
-        <br />
-        <a href="#" className={styles.toTop}>
-          GO TO TOP
-        </a>
+        <p>© All rights reserved. Made by Vladislav Pineker and Yerassyl Sagindykov - IT2CCO-2301</p>
+        <a href="#top" className={styles.toTop}>GO TO TOP</a>
       </div>
     </footer>
   );

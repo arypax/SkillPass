@@ -1,71 +1,139 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 345px;
+  background: #FFFFFF;
+  color: #1E212C;
+  font-family: 'Lato', sans-serif;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: #1E212C;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.highlight {
+  color: #ff3f3a;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  font-size: 15px;
+  position: relative;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: #424551;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 6px 0;
+}
+
+.navLinks li a:hover {
+  color: #ff3f3a;
+}
+
+.navLinks li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ff3f3a;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+.navLinks li a:hover::after {
+  width: 100%;
+}
+
+.rightMenu {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.consultationButton {
+  background: #ff3f3a;
+  border: 1px solid #ff3f3a;
+  border-radius: 4px;
+  padding: 8px 24px;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.consultationButton:hover {
+  background: transparent;
+  color: #ff3f3a;
+}
+
+.authLink {
+  color: #424551;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.authLink:hover {
+  color: #ff3f3a;
+}
+
+.authLink svg {
+  font-size: 18px;
+}
+
+@media (max-width: 1200px) {
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 80px;
-    background: #161616;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    padding: 12px 40px;
   }
+}
 
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-  }
-
-  .highlight {
-    color: #ff3f3a;
-    text-decoration: none;
-  }
-
+@media (max-width: 992px) {
   .navLinks {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-  }
-
-  .navLinks li {
-    font-size: 16px;
-  }
-
-  .navLinks li a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-  }
-
-  .navLinks li a:hover {
-    color: #ff3f3a;
-  }
-
-  .rightMenu {
-    display: flex;
-    align-items: center;
     gap: 20px;
   }
+  
+  .rightMenu {
+    gap: 20px;
+  }
+}
 
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+  
   .consultationButton {
-    background: #ff3f3a;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-
-  .consultationButton:hover {
-    background: #d8322e;
-  }
-
-  .authLink {
-    color: white;
-    text-decoration: none;
+    padding: 8px 16px;
     font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
   }
+  
+  .authLink span {
+    display: none;
+  }
+}

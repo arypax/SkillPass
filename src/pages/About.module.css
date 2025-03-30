@@ -1,0 +1,424 @@
+.about {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    gap: 60px;
+    padding: 80px 0;
+    align-items: center;
+  }
+  
+  .heroContent {
+    flex: 1;
+  }
+  
+  .subtitle {
+    color: #FF3F3A;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+  }
+  
+  .hero h1 {
+    font-size: 46px;
+    font-weight: 900;
+    line-height: 130%;
+    color: #1E212C;
+    margin: 8px 0 24px;
+  }
+  
+  .hero p {
+    color: #424551;
+    font-size: 16px;
+    line-height: 160%;
+    margin-bottom: 16px;
+  }
+  
+  .cta {
+    display: flex;
+    gap: 24px;
+    margin-top: 48px;
+  }
+  
+  .primaryButton {
+    background: #FF3F3A;
+    border-radius: 4px;
+    padding: 12px 32px;
+    color: white;
+    font-weight: 700;
+    border: 1px solid #FF3F3A;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .primaryButton:hover {
+    background: transparent;
+    color: #FF3F3A;
+  }
+  
+  .secondaryButton {
+    background: transparent;
+    border: 1px solid #FF3F3A;
+    border-radius: 4px;
+    padding: 12px 32px;
+    color: #FF3F3A;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .secondaryButton:hover {
+    background: #FF3F3A;
+    color: white;
+  }
+  
+  /* Statistics Section */
+  .statistics {
+    padding: 80px 0;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+  
+  .imageSection {
+    flex: 1;
+    background: #F4F5F6;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .playButton {
+    background: #FF3F3A;
+    border: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .playButton:hover {
+    transform: scale(1.1);
+  }
+  
+  .statsGrid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    align-content: center;
+  }
+  
+  .statItem {
+    text-align: center;
+  }
+  
+  .statNumber {
+    font-size: 48px;
+    font-weight: 900;
+    color: #FF3F3A;
+    display: block;
+  }
+  
+  .statText {
+    color: #1E212C;
+    font-size: 16px;
+    line-height: 160%;
+  }
+  
+  .aboutMainImage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  /* Core Values Section */
+  .coreValues {
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .sectionTitle {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  
+  .coreValues h3 {
+    font-size: 46px;
+    font-weight: 900;
+    color: #1E212C;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .valueCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  
+  .valueIcon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .valueIcon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .valueCard h4 {
+    color: #1E212C;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .valueCard p {
+    color: #787A80;
+    font-size: 16px;
+    line-height: 160%;
+    max-width: 285px;
+    margin: 0 auto;
+  }
+  
+  /* Directions Section */
+  .directions {
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .directions h3 {
+    font-size: 46px;
+    font-weight: 900;
+    color: #1E212C;
+    margin-bottom: 60px;
+  }
+  
+  .directionsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .directionCard {
+    text-align: left;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .directionCard:hover {
+    transform: translateY(-10px);
+  }
+  
+  .directionCard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .category {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 16px;
+  }
+  
+  .directionCard p {
+    padding: 0 16px;
+    color: #787A80;
+    margin-bottom: 16px;
+  }
+  
+  .checkCourses {
+    display: inline-block;
+    padding: 0 16px 16px;
+    color: #FF3F3A;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .comingSoon {
+    background: #F4F5F6;
+    border-radius: 4px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Study Process Section */
+  .studyProcess {
+    padding: 80px 0;
+  }
+  
+  .stepsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+  }
+  
+  .stepCard {
+    position: relative;
+  }
+  
+  .stepNumber {
+    color: #FF3F3A;
+    font-weight: 900;
+    font-size: 12px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .stepCard h4 {
+    color: #1E212C;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .stepCard p {
+    color: #787A80;
+    font-size: 16px;
+    line-height: 160%;
+  }
+  
+  /* Team Section */
+  .team {
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .team h3 {
+    font-size: 46px;
+    font-weight: 900;
+    color: #1E212C;
+    margin-bottom: 60px;
+  }
+  
+  .teamGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  .teamCard {
+    text-align: center;
+  }
+  
+  .teamCard img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  
+  .teamCard h4 {
+    color: #1E212C;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  
+  .teamCard p {
+    color: #787A80;
+    font-size: 16px;
+    line-height: 160%;
+  }
+  
+  .socialLinks {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  
+  .socialLinks a {
+    color: #787A80;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .socialLinks a:hover {
+    color: #FF3F3A;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .valuesGrid,
+    .teamGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .hero {
+      flex-direction: column;
+    }
+    
+    .directionsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stepsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .statistics {
+      flex-direction: column;
+    }
+    
+    .valuesGrid,
+    .directionsGrid,
+    .teamGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .hero h1,
+    .coreValues h3,
+    .directions h3,
+    .team h3 {
+      font-size: 32px;
+    }
+  }

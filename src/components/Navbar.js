@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from './ui/Button'; // <-- ПРАВИЛЬНЫЙ ПУТЬ
+import Button from './ui/button';
 import { FaUser } from 'react-icons/fa';
 import styles from './Navbar.module.css';
 
