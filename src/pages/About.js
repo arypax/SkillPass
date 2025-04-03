@@ -35,27 +35,27 @@ function About() {
 
   const directions = [
     {
-      image: '/images/course-1.jpg',
+      image: '/images/direction-1.png',
       category: 'Marketing',
       description: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
     },
     {
-      image: '/images/course-2.jpg',
+      image: '/images/direction-2.png',
       category: 'Management',
       description: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
     },
     {
-      image: '/images/course-7.jpg',
+      image: '/images/direction-3.png',
       category: 'HR & Recruiting',
       description: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
     },
     {
-      image: '/images/course-8.jpg',
+      image: '/images/direction-4.png',
       category: 'Design',
       description: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
     },
     {
-      image: '/images/course-3.jpg',
+      image: '/images/direction-5.png',
       category: 'Development',
       description: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
     }
@@ -181,40 +181,62 @@ function About() {
 
       {/* Study Process Section */}
       <section className={styles.studyProcess}>
-        <h2 className={styles.sectionTitle}>STUDYING PROCESS</h2>
-        <h3>That's how we do it</h3>
-        <div className={styles.stepsGrid}>
-          {studyingSteps.map((step, index) => (
-            <div key={index} className={styles.stepCard}>
-              <span className={styles.stepNumber}>{step.step}</span>
-              <h4>{step.title}</h4>
-              <p>{step.description}</p>
+        <div className={styles.studyProcessWrapper}>
+          <div className={styles.studyProcessContent}>
+            <h2>STUDYING PROCESS</h2>
+            <h3>That's how we do it</h3>
+            <div className={styles.stepsGrid}>
+              {studyingSteps.map((step, index) => (
+                <div key={index} className={styles.stepCard}>
+                  <span className={styles.stepNumber}>{step.step}</span>
+                  <h4>{step.title}</h4>
+                  <p>{step.description}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          <div className={styles.studyProcessImage}>
+            <img src="/images/illustration-1.png" alt="Studying Process Illustration" />
+          </div>
         </div>
       </section>
 
       {/* Team Section */}
       <section className={styles.team}>
-        <h2 className={styles.sectionTitle}>BEST TUTORS ARE ALL HERE</h2>
+        <h2>BEST TUTORS ARE ALL HERE</h2>
         <h3>Meet our team</h3>
         <div className={styles.teamGrid}>
-          {team.map((member, index) => (
-            <div key={index} className={styles.teamCard}>
-              <img src={member.image} alt={member.name} />
-              <h4>{member.name}</h4>
-              <p>{member.position}</p>
-              {member.social && (
-                <div className={styles.socialLinks}>
-                  {member.social.map((platform, i) => (
-                    <a key={i} href="#" className={styles[platform]}>
-                      {platform}
-                    </a>
-                  ))}
-                </div>
-              )}
+          <div className={styles.teamCard}>
+            <div className={styles.teamImageWrapper}>
+              <img src="/images/course-1.jpg" alt="Yerassyl Sagindykov" />
             </div>
-          ))}
+            <h4>Yerassyl Sagindykov</h4>
+            <p>Team leader</p>
+          </div>
+
+          <div className={styles.teamCard}>
+            <div className={styles.teamImageWrapper}>
+              <img src="/images/course-2.jpg" alt="Vladislav Pineker" />
+            </div>
+            <h4>Vladislav Pineker</h4>
+            <p>Founder and Program Director</p>
+          </div>
+
+          <div className={styles.teamCard}>
+            <div className={styles.teamImageWrapper}>
+              <img src="/images/course-7.jpg" alt="Abylai Sydyk" />
+            </div>
+            <h4>Abylai Sydyk</h4>
+            <p>Marketer, Curator of Marketing Course</p>
+          </div>
+
+          <div className={styles.teamCard}>
+            <div className={styles.teamImageWrapper}>
+              <img src="/images/course-8.jpg" alt="Baysangur Yunusov" />
+            </div>
+            <h4>Baysangur Yunusov</h4>
+            <p>Fullstack developer</p>
+          </div>
         </div>
       </section>
     </div>
