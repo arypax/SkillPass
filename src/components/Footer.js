@@ -31,7 +31,7 @@ const Footer = () => {
           <ul>
             <li><a href="/about">About Us</a></li>
             <li><a href="/courses">Courses</a></li>
-            <li><a href="/events">Events</a></li>
+            <li><a href="/events-grid">Events</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/contacts">Contacts</a></li>
           </ul>
@@ -68,14 +68,14 @@ const Footer = () => {
             <button type="submit">→</button>
           </div>
           <p className={styles.subscribeText}>
-            *Subscribe to our newsletter to receive communications and early updates from Createx SEO Agency.
+            *Subscribe to our newsletter to receive communications and early updates from SkillPass SEO Agency.
           </p>
         </div>
       </div>
 
       {/* Копирайт */}
       <div className={styles.bottom}>
-        <p>© All rights reserved. Made by Vladislav Pineker and Yerassyl Sagindykov - IT2CCO-2301</p>
+        <p>© All rights reserved 2025. Made by Vladislav Pineker and Yerassyl Sagindykov - IT2CCO-2301</p>
         <a href="#top" className={styles.toTop}>GO TO TOP</a>
       </div>
     </footer>

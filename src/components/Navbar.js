@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from './ui/button';
 import { FaUser } from 'react-icons/fa';
 import styles from './Navbar.module.css';
 
-const Navbar = () => {
+const Navbar = ({ onAuthOpen }) => {
+  const navigate = useNavigate();
   return (
     <nav className={styles.navbar}>
       {/* Logo */}
@@ -33,11 +34,13 @@ const Navbar = () => {
 
       {/* Buttons */}
       <div className={styles.rightMenu}>
-        <Button className={styles.consultationButton}>Get consultation</Button>
-        <Link to="/login" className={styles.authLink}>
+        <Button className={styles.consultationButton} onClick={() => navigate('/under-construction')}>
+          Get consultation
+        </Button>
+        <button type="button" className={styles.authLink} onClick={onAuthOpen}>
           <FaUser />
           <span>Log in / Register</span>
-        </Link>
+        </button>
       </div>
     </nav>
   );

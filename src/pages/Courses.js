@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import styles from './Courses.module.css';
+import { Link } from 'react-router-dom';
 
 const testimonials = [
   {
     id: 1,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.",
+    text: "I am extremely satisfied with the course. The instructors were knowledgeable and the content was well-structured. The practical exercises helped me understand the concepts better. I would highly recommend this course to anyone interested in learning.",
     author: "Eleanor Pena",
-    position: "Position, Course",
+    position: "Marketing Graduate",
     image: "/images/course-1.jpg"
   },
   {
     id: 2,
-    text: "Etiam pellentesque non nibh non pulvinar. Mauris posuere, tellus sit amet tempus vestibulum, tellus felis congue nibh, scelerisque lectus nunc in turpis. Integer vel blandit neque. Vestibulum ante ipsum primis in faucibus.",
+    text: "The marketing course exceeded my expectations. The real-world examples and case studies were invaluable. The instructors were always available to answer questions and provide guidance. This course has significantly improved my marketing skills.",
     author: "John Smith",
     position: "Student, Marketing Course",
     image: "/images/course-2.jpg"
   },
   {
     id: 3,
-    text: "Cras eu elit congue, placerat dui ut, tincidunt nisl. Nulla leo elit, pharetra bibendum justo quis, cursus consectetur erat. Sed nec posuere magna, eu aliquam lorem. Donec molestie felis ut consectetur pretium.",
+    text: "As a design graduate, I found this course to be incredibly valuable. The curriculum was comprehensive and up-to-date with industry standards. The feedback from instructors was constructive and helped me grow as a designer.",
     author: "Sarah Johnson",
     position: "Graduate, Design Course",
     image: "/images/course-7.jpg"
@@ -162,7 +163,7 @@ function Courses() {
 
       <div className={styles.courseGrid}>
         {filteredCourses.map((course) => (
-          <div key={course.id} className={styles.courseCard}>
+          <Link to={`/course/${course.id}`} key={course.id} className={styles.courseCard}>
             <div className={styles.courseImage}>
               <img src={course.image} alt={course.instructor} />
             </div>
@@ -176,7 +177,7 @@ function Courses() {
                 <span className={styles.instructor}>by {course.instructor}</span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

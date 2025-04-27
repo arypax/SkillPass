@@ -287,6 +287,19 @@
   background-image: url('../assets/images/icons/mic.svg');
 }
 
+.noResults {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  border-radius: 4px;
+}
+
+.noResults p {
+  font-size: 18px;
+  color: #424551;
+  margin: 0;
+}
+
 @media (max-width: 1200px) {
   .blogGrid {
     grid-template-columns: repeat(2, 1fr);

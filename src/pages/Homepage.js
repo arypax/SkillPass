@@ -5,35 +5,35 @@ import styles from './Homepage.module.css';
 const testimonials = [
   {
     id: 1,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.",
-    author: "Eleanor Pena",
+    text: "I am extremely satisfied with the course. The instructors were knowledgeable and the content was well-structured. The practical exercises helped me understand the concepts better. I would highly recommend this course to anyone interested in learning.",
+    author: "Alex Smith",
     position: "Position, Course",
     image: "/images/course-1.jpg"
   },
   {
     id: 2,
-    text: "Etiam pellentesque non nibh non pulvinar. Mauris posuere, tellus sit amet tempus vestibulum, tellus felis congue nibh, scelerisque lectus nunc in turpis. Integer vel blandit neque. Vestibulum ante ipsum primis in faucibus.",
+    text: "The marketing course exceeded my expectations. The real-world examples and case studies were invaluable. The instructors were always available to answer questions and provide guidance. This course has significantly improved my marketing skills.",
     author: "John Smith",
     position: "Student, Marketing Course",
     image: "/images/course-2.jpg"
   },
   {
     id: 3,
-    text: "Cras eu elit congue, placerat dui ut, tincidunt nisl. Nulla leo elit, pharetra bibendum justo quis, cursus consectetur erat. Sed nec posuere magna, eu aliquam lorem. Donec molestie felis ut consectetur pretium.",
+    text: "As a design graduate, I found this course to be incredibly valuable. The curriculum was comprehensive and up-to-date with industry standards. The feedback from instructors was constructive and helped me grow as a designer.",
     author: "Sarah Johnson",
     position: "Graduate, Design Course",
     image: "/images/course-7.jpg"
   },
   {
     id: 4,
-    text: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.",
+    text: "The development course provided me with practical skills that I use daily in my work. The hands-on projects were challenging but rewarding. The community of learners was supportive and collaborative.",
     author: "Michael Brown",
     position: "Student, Development Course",
     image: "/images/course-8.jpg"
   },
   {
     id: 5,
-    text: "Nullam et tellus ac ligula condimentum sodales. Aenean tincidunt viverra suscipit. Maecenas eu molestie ex, quis sagittis mauris. Praesent eget nisi tempor, tempus erat at, viverra eros.",
+    text: "This business course transformed my understanding of modern business practices. The instructors were industry experts who shared valuable insights. The networking opportunities were excellent, and I've made lasting professional connections.",
     author: "Emily Davis",
     position: "Graduate, Business Course",
     image: "/images/course-4.jpg"
@@ -257,7 +257,7 @@ const Homepage = () => {
                 <span>Online master class</span>
               </div>
             </div>
-            <button className={styles.viewMore}>View more</button>
+            <Link to="/under-construction" className={styles.viewMore}>View more</Link>
           </div>
 
           <div className={styles.eventCard}>
@@ -272,7 +272,7 @@ const Homepage = () => {
                 <span>Online lecture</span>
               </div>
             </div>
-            <button className={styles.viewMore}>View more</button>
+            <Link to="/under-construction" className={styles.viewMore}>View more</Link>
           </div>
 
           <div className={styles.eventCard}>
@@ -287,12 +287,12 @@ const Homepage = () => {
                 <span>Online workshop</span>
               </div>
             </div>
-            <button className={styles.viewMore}>View more</button>
+            <Link to="/under-construction" className={styles.viewMore}>View more</Link>
           </div>
         </div>
         <div className={styles.eventsFooter}>
           <p>Do you want more?</p>
-          <Link to="/events" className={styles.exploreButton}>
+          <Link to="/events-grid" className={styles.exploreButton}>
             Explore all events
           </Link>
         </div>
@@ -427,7 +427,7 @@ const Homepage = () => {
               </div>
               <h4>What is traffic arbitrage and does it really make money?</h4>
               <p>In this podcast, we will explore the concept of traffic arbitrage, which involves driving traffic from one platform to another to generate profits. </p>
-              <Link to="/blog/1" className={styles.blogReadMore}>Listen</Link>
+              <Link to="/under-construction" className={styles.blogReadMore}>Listen</Link>
             </div>
           </article>
 
@@ -443,8 +443,8 @@ const Homepage = () => {
                 <span>45 min</span>
               </div>
               <h4>Who can I get a product review from?</h4>
-              <p>Neque a, senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucib...</p>
-              <Link to="/blog/2" className={styles.blogReadMore}>Watch</Link>
+              <p>Learn about the best sources for getting product reviews, from industry experts to satisfied customers.</p>
+              <Link to="/under-construction" className={styles.blogReadMore}>Watch</Link>
             </div>
           </article>
 
@@ -459,8 +459,8 @@ const Homepage = () => {
                 <span>August 8, 2020</span>
               </div>
               <h4>How to properly justify the choice of a creative profession</h4>
-              <p>Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...</p>
-              <Link to="/blog/3" className={styles.blogReadMore}>Read</Link>
+              <p>Explore the key factors to consider when choosing a creative career path. From passion and skills to market demand.</p>
+              <Link to="/under-construction" className={styles.blogReadMore}>Read</Link>
             </div>
           </article>
         </div>

@@ -72,6 +72,7 @@
   padding: 24px 32px;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: #1E212C;
 }
 
 .themeItem.active {
@@ -80,6 +81,7 @@
               0px 30px 24px -10px rgba(154, 156, 165, 0.05), 
               0px 12px 10px -6px rgba(154, 156, 165, 0.04), 
               0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  color: #FF3F3A;
 }
 
 .themeHeader {
@@ -93,13 +95,37 @@
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: 700;
+  color: #1E212C;
+  margin-right: 8px;
+  transition: color 0.3s;
+}
+
+.themeItem.active .themeNumber {
   color: #FF3F3A;
 }
 
 .expandIcon {
   font-size: 20px;
-  color: #FF3F3A;
   font-weight: 700;
+  margin-left: 8px;
+  color: #1E212C;
+  transition: color 0.3s;
+}
+
+.themeItem.active .expandIcon {
+  color: #FF3F3A;
+}
+
+.themeItem .themeTitle {
+  font-weight: 700;
+  font-size: 16px;
+  color: #1E212C;
+  display: inline;
+  transition: color 0.3s;
+}
+
+.themeItem.active .themeTitle {
+  color: #FF3F3A;
 }
 
 .themeContent h3 {
@@ -115,6 +141,7 @@
   font-size: 16px;
   line-height: 160%;
   color: #424551;
+  margin-top: 8px;
 }
 
 .eventSidebar {
@@ -176,7 +203,7 @@
 
 .joinButton {
   width: 100%;
-  background: #FF3F3A;
+  background: linear-gradient(90deg, #ff3f3a 0%, #ff8f3a 100%);
   border-radius: 4px;
   padding: 15px 32px;
   font-family: 'Lato', sans-serif;
@@ -185,11 +212,27 @@
   color: #FFFFFF;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s;
+  margin-top: 16px;
 }
 
 .joinButton:hover {
-  background: #E31F1A;
+  background: linear-gradient(90deg, #e31f1a 0%, #ff8f3a 100%);
+}
+
+.eventSidebar a {
+  color: #FF3F3A;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.eventSidebar a:hover {
+  color: #e31f1a;
+  text-decoration: underline;
 }
 
 @media (max-width: 1200px) {

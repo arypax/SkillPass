@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './EventsGrid.module.css';
 
 const events = [
@@ -57,10 +58,23 @@ const events = [
     date: { day: '18', month: 'May' },
     time: '10:00 - 12:00',
     type: 'Online lecture',
+  },
+  {
+    id: 9,
+    title: 'How to brief a client and present your design to approve it from the first show.',
+    date: { day: '18', month: 'May' },
+    time: '10:00 - 12:00',
+    type: 'Online lecture',
   }
 ];
 
 function EventsGrid() {
+  const navigate = useNavigate();
+
+  const handleViewMore = () => {
+    navigate('/event');
+  };
+
   return (
     <div className={styles.eventsPage}>
       <div className={styles.header}>
@@ -77,7 +91,7 @@ function EventsGrid() {
             <div className={styles.eventTime}>{event.time}</div>
             <h3 className={styles.eventTitle}>{event.title}</h3>
             <div className={styles.eventType}>{event.type}</div>
-            <button className={styles.viewMore}>View more</button>
+            <button className={styles.viewMore} onClick={handleViewMore}>View more</button>
           </div>
         ))}
       </div>

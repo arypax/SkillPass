@@ -1,6 +1,7 @@
 // src/pages/About.js
 import React from 'react';
 import styles from './About.module.css';
+import { Link } from 'react-router-dom';
 
 function About() {
   const statistics = [
@@ -14,22 +15,22 @@ function About() {
     {
       icon: '/images/structured.png',
       title: 'Structured Approach',
-      description: 'Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.'
+      description: 'Our courses follow a clear, step-by-step learning path designed to help you master each concept before moving to the next.'
     },
     {
       icon: '/images/feedback.png',
       title: 'Professional Feedbacks',
-      description: 'Culpa nostrud commodo ea consequat reprehenderit aliqua.'
+      description: 'Get detailed feedback from industry experts who will help you improve your skills and knowledge.'
     },
     {
       icon: '/images/efficiency.png',
       title: 'Efficiency',
-      description: 'Viverra scelerisque consequat net. Adipisicing esse consequat.'
+      description: 'Learn at your own pace with our optimized curriculum that focuses on practical skills and real-world applications.'
     },
     {
       icon: '/images/schedule.png',
       title: 'Flexible Schedule',
-      description: 'Aute eiusmod dolore dolore deserunt veniam ad deserunt.'
+      description: 'Study whenever and wherever you want with our 24/7 accessible online platform and self-paced learning materials.'
     }
   ];
 
@@ -37,27 +38,27 @@ function About() {
     {
       image: '/images/direction-1.png',
       category: 'Marketing',
-      description: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
+      description: 'Learn modern marketing strategies, digital advertising, and brand management to help businesses grow and succeed in the digital age.'
     },
     {
       image: '/images/direction-2.png',
       category: 'Management',
-      description: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
+      description: 'Master the art of leadership, project management, and business strategy to effectively lead teams and drive organizational success.'
     },
     {
       image: '/images/direction-3.png',
       category: 'HR & Recruiting',
-      description: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
+      description: 'Develop skills in talent acquisition, employee relations, and HR management to build and maintain strong, productive teams.'
     },
     {
       image: '/images/direction-4.png',
       category: 'Design',
-      description: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
+      description: 'Explore creative design principles, user experience, and visual communication to create impactful and engaging digital products.'
     },
     {
       image: '/images/direction-5.png',
       category: 'Development',
-      description: 'Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.'
+      description: 'Learn programming languages, software development methodologies, and best practices to build robust and scalable applications.'
     }
   ];
 
@@ -65,22 +66,22 @@ function About() {
     {
       step: 'STEP 1',
       title: 'Watching online video lectures',
-      description: 'Aliquam turpis viverra quam sit interdum blandit posuere pellentesque. Nisi, imperdiet gravida massa neque.'
+      description: 'Access our comprehensive video lectures anytime, anywhere. Learn at your own pace with high-quality content created by industry experts.'
     },
     {
       step: 'STEP 2',
       title: 'Passing test',
-      description: 'Facilisis pellentesque quis accumsan ultricies. Eu egestas eget feugiat lacus, amet, sollicitudin egestas laoreet etiam.'
+      description: 'Test your knowledge with interactive quizzes and assignments designed to reinforce your learning and ensure understanding of key concepts.'
     },
     {
       step: 'STEP 3',
       title: "Curator's feedback",
-      description: 'Eget amet, enim pharetra leo egestas nisi, odio imperdiet facilisis. Aliquet orci varius volutpat egestas facilisi lobortis.'
+      description: 'Receive personalized feedback from experienced curators who will guide you through your learning journey and help you improve your skills.'
     },
     {
       step: 'STEP 4',
       title: 'Corrections if needed',
-      description: 'Non tempor pulvinar tincidunt aliquam. Placerat ultricies malesuada dui auctor.'
+      description: 'Get detailed feedback on your work and make necessary improvements with the support of our expert instructors and learning resources.'
     }
   ];
 
@@ -118,8 +119,8 @@ function About() {
           <p>SkillPass Online Courses is a leader in online studying. We have lots of courses and programs from the main market experts.</p>
           <p>We provide relevant approaches to online learning, internships and employment in the largest companies in the country. Our educational programs help you get a new specialty from scratch. During your studies, we will help you find a job. Check the courses and online events that we organise.</p>
           <div className={styles.cta}>
-            <button className={styles.primaryButton}>Explore events</button>
-            <button className={styles.secondaryButton}>Browse courses</button>
+            <Link to="/events-grid" className={styles.primaryButton}>Explore events</Link>
+            <Link to="/courses" className={styles.secondaryButton}>Browse courses</Link>
           </div>
         </div>
         <div className={styles.heroImage}>
@@ -169,7 +170,7 @@ function About() {
               <img src={direction.image} alt={direction.category} />
               <span className={styles.category}>{direction.category}</span>
               <p>{direction.description}</p>
-              <a href="#" className={styles.checkCourses}>Check courses →</a>
+              <Link to="/courses" className={styles.checkCourses}>Check courses →</Link>
             </div>
           ))}
           <div className={styles.comingSoon}>
