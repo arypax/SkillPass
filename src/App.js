@@ -12,6 +12,7 @@ import Contacts from './pages/Contacts';
 import AuthModal from './components/AuthModal';
 import UnderConstruction from './pages/UnderConstruction';
 import SinglePost from './pages/SinglePost';
+import Course from './pages/Course';
 import './App.css';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<About />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/course/:id" element={<Course />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/events-grid" element={<EventsGrid />} />
             <Route path="/event" element={<Event />} />

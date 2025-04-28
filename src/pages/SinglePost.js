@@ -129,7 +129,7 @@ export default function SinglePost() {
             </form>
             <label className={styles.agreeLabel}>
               <input type="checkbox" defaultChecked />
-              I agree to receive communications from Createx Online School
+              I agree to receive communications from SkillPass Online School
             </label>
           </div>
         </div>
