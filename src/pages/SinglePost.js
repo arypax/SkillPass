@@ -62,23 +62,11 @@ export default function SinglePost() {
                   <span className={styles.tag}>#self-development</span>
                 </div>
                 <div className={styles.shareLabel}>Share:</div>
-                <a href="#" className={styles.socialIcon}><i className="fab fa-facebook-f"></i></a>
-                <a href="#" className={styles.socialIcon}><i className="fab fa-twitter"></i></a>
-                <a href="#" className={styles.socialIcon}><i className="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-            {/* Теги и share */}
-            <div className={styles.tagsShareRow}>
-              <div className={styles.tagsRowDesktop}>
-                <span className={styles.tag}>#learning</span>
-                <span className={styles.tag}>#HR</span>
-                <span className={styles.tag}>#self-development</span>
-              </div>
-              <div className={styles.shareRowBottom}>
-                <span>Share:</span>
-                <a href="#" className={styles.socialIcon}><i className="fab fa-facebook-f"></i></a>
-                <a href="#" className={styles.socialIcon}><i className="fab fa-twitter"></i></a>
-                <a href="#" className={styles.socialIcon}><i className="fab fa-linkedin-in"></i></a>
+                <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}><FaFacebookF /></a>
+                <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}><FaTwitter /></a>
+                <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}><FaLinkedinIn /></a>
+                <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}><FaYoutube /></a>
+                <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}><FaTelegramPlane /></a>
               </div>
             </div>
           </div>
@@ -131,7 +119,7 @@ export default function SinglePost() {
         {/* Newsletter subscription */}
         <div className={styles.newsletterBox}>
           <div className={styles.newsletterLeft}>
-            <img src="/images/illustration-1.png" alt="Newsletter illustration" />
+            <img src="/images/singlepost-illustration.png" alt="Newsletter illustration" />
           </div>
           <div className={styles.newsletterRight}>
             <div className={styles.newsletterTitle}>Want to get the best articles weekly?<br/>Subscribe to our newsletter!</div>
