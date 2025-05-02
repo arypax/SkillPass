@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
 import styles from './AuthModal.module.css';
 import { FaGoogle } from 'react-icons/fa';
+import { auth } from '../firebase/config';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 const AuthModal = ({ isOpen, onClose }) => {
   const [mode, setMode] = useState('signin'); // 'signin' или 'signup'
+
+  const handleGoogleLogin = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+      onClose(); // Закрываем модальное окно после успешной авторизации
+    } catch (error) {
+      console.error('Error during Google login:', error);
+    }
+  };
 
   if (!isOpen) return null;
 
@@ -68,7 +80,11 @@ const AuthModal = ({ isOpen, onClose }) => {
         <div className={styles.divider}></div>
         <div className={styles.socialBlock}>
           <span>Or sign in with</span>
-          <button className={styles.socialBtn} type="button">
+          <button 
+            className={styles.socialBtn} 
+            type="button"
+            onClick={handleGoogleLogin}
+          >
             <FaGoogle />
           </button>
         </div>

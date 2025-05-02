@@ -1,11 +1,50 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Button from './ui/button';
 import { FaUser } from 'react-icons/fa';
+import { auth } from '../firebase/config';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
 import styles from './Navbar.module.css';
 
 const Navbar = ({ onAuthOpen }) => {
   const navigate = useNavigate();
+  const [user, setUser] = useState(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate('/');
+      setIsDropdownOpen(false);
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <nav className={styles.navbar}>
       {/* Logo */}
@@ -37,10 +76,36 @@ const Navbar = ({ onAuthOpen }) => {
         <Button className={styles.consultationButton} onClick={() => navigate('/under-construction')}>
           Get consultation
         </Button>
-        <button type="button" className={styles.authLink} onClick={onAuthOpen}>
-          <FaUser />
-          <span>Log in / Register</span>
-        </button>
+        {user ? (
+          <div className={styles.userMenu} ref={dropdownRef}>
+            <img 
+              src={user.photoURL} 
+              alt={user.displayName} 
+              className={styles.userAvatar}
+            />
+            <button 
+              className={styles.userNameButton}
+              onClick={toggleDropdown}
+            >
+              {user.displayName}
+            </button>
+            {isDropdownOpen && (
+              <div className={styles.dropdownMenu}>
+                <button 
+                  className={styles.dropdownItem}
+                  onClick={handleLogout}
+                >
+                  Log out
+                </button>
+              </div>
+            )}
+          </div>
+        ) : (
+          <button type="button" className={styles.authLink} onClick={onAuthOpen}>
+            <FaUser />
+            <span>Log in / Register</span>
+          </button>
+        )}
       </div>
     </nav>
   );

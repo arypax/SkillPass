@@ -16,13 +16,6 @@ const Footer = () => {
             approaches to online learning, internships, and employment in the largest
             companies in the country.
           </p>
-          <div className={styles.socialIcons}>
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-telegram"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-linkedin-in"></i></a>
-          </div>
         </div>
 
         {/* Карта сайта */}
@@ -41,11 +34,11 @@ const Footer = () => {
         <div className={styles.courses}>
           <h3>COURSES</h3>
           <ul>
-            <li><a href="/courses/marketing">Marketing</a></li>
-            <li><a href="/courses/management">Management</a></li>
-            <li><a href="/courses/hr">HR & Recruiting</a></li>
-            <li><a href="/courses/design">Design</a></li>
-            <li><a href="/courses/development">Development</a></li>
+            <li><a href="/under-construction">Marketing</a></li>
+            <li><a href="/under-construction">Management</a></li>
+            <li><a href="/under-construction">HR & Recruiting</a></li>
+            <li><a href="/under-construction">Design</a></li>
+            <li><a href="/under-construction">Development</a></li>
           </ul>
         </div>
 

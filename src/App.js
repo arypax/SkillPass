@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Homepage from './pages/Homepage';
@@ -13,7 +13,19 @@ import AuthModal from './components/AuthModal';
 import UnderConstruction from './pages/UnderConstruction';
 import SinglePost from './pages/SinglePost';
 import Course from './pages/Course';
+import CourseContent from './pages/CourseContent';
+import Test from './pages/Test';
+import Login from './pages/Login';
+import { auth } from './firebase/config';
 import './App.css';
+
+// Защищенный маршрут
+const ProtectedRoute = ({ children }) => {
+  if (!auth.currentUser) {
+    return <Navigate to="/login" />;
+  }
+  return children;
+};
 
 function App() {
   const [authOpen, setAuthOpen] = useState(false);
@@ -34,6 +46,24 @@ function App() {
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/under-construction" element={<UnderConstruction />} />
             <Route path="/single-post" element={<SinglePost />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/course" element={<Course />} />
+            <Route
+              path="/course-content"
+              element={
+                <ProtectedRoute>
+                  <CourseContent />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/test"
+              element={
+                <ProtectedRoute>
+                  <Test />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </main>
         <Footer />

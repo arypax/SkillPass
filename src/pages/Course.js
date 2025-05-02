@@ -1,7 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { auth, db } from '../firebase/config';
+import { doc, setDoc } from 'firebase/firestore';
 import styles from './Course.module.css';
 
 function Course() {
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
+  const handleJoinCourse = async () => {
+    if (!auth.currentUser) {
+      // Если пользователь не авторизован, перенаправляем на страницу входа
+      navigate('/login');
+      return;
+    }
+
+    setLoading(true);
+    try {
+      // Создаем запись о прогрессе пользователя в Firestore
+      await setDoc(doc(db, 'users', auth.currentUser.uid), {
+        courseProgress: {
+          videos: [false, false, false],
+          articles: [false, false],
+          testCompleted: false
+        },
+        enrolledAt: new Date().toISOString()
+      }, { merge: true });
+
+      // Перенаправляем на страницу с содержимым курса
+      navigate('/course-content');
+    } catch (error) {
+      console.error('Error enrolling in course:', error);
+      // Здесь можно добавить обработку ошибок
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.hero}>
@@ -39,7 +74,13 @@ function Course() {
           <div className={styles.cardValueBigRed}>$120 per month</div>
           <div className={styles.cardText}>Nulla sem adipiscing adipiscing felis fringilla. Adipiscing mauris quam ac elit tristique dis.</div>
 
-          <button className={styles.cardButton}>Join the course</button>
+          <button 
+            className={styles.cardButton}
+            onClick={handleJoinCourse}
+            disabled={loading}
+          >
+            {loading ? 'Processing...' : 'Join the course'}
+          </button>
         </div>
       </div>
     </div>

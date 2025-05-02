@@ -111,6 +111,77 @@
   font-size: 18px;
 }
 
+/* Стили для меню пользователя */
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.userAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userNameButton {
+  background: none;
+  border: none;
+  color: #424551;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: all 0.3s ease;
+}
+
+.userNameButton:hover {
+  color: #ff3f3a;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #ff3f3a;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(30, 33, 44, 0.18);
+  min-width: 140px;
+  margin-top: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+.dropdownItem {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: center;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropdownItem:hover {
+  background: rgba(255, 63, 58, 0.1);
+  color: #ff3f3a;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 1200px) {
   .navbar {
     padding: 12px 40px;
@@ -138,6 +209,10 @@
   }
   
   .authLink span {
+    display: none;
+  }
+
+  .userNameButton {
     display: none;
   }
 }

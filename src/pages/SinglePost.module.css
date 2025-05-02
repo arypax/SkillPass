@@ -61,6 +61,10 @@
   color: #787A80;
   margin-bottom: 24px;
 }
+.metaRow span, .metaRow i, .metaRow .shareLabel, .metaRow .socialIcon {
+  vertical-align: middle;
+  line-height: 1.6;
+}
 .metaRow span, .metaRow i {
   color: #787A80;
   font-size: 15px;
@@ -74,7 +78,7 @@
   color: #787A80;
 }
 .shareLabel {
-  margin-left: 16px;
+  margin-left: 0;
   color: #1E212C;
   font-weight: 700;
   font-size: 15px;
@@ -83,10 +87,16 @@
   color: #787A80;
   margin-left: 8px;
   font-size: 16px;
+  display: inline-flex;
+  align-items: center;
   transition: color 0.2s;
 }
 .socialIcon:hover {
   color: #ff3f3a;
+}
+.metaRow svg {
+  font-size: 1em;
+  vertical-align: middle;
 }
 
 .mainImageWrapper {
@@ -610,7 +620,7 @@
   background: none !important;
   border-radius: 0;
   padding: 0 !important;
-  margin-top: 32px;
+  margin-top: 66px;
   margin-bottom: 0 !important;
   box-shadow: none !important;
   gap: 16px;
@@ -808,4 +818,11 @@
   color: #232323;
   margin-right: 12px;
   font-size: 16px;
+}
+
+.metaShareGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 16px;
 }

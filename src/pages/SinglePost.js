@@ -22,38 +22,40 @@ export default function SinglePost() {
                 HR statistics: job search, interviews, hiring and recruiting
               </h1>
               <div className={styles.metaRow}>
-                <span><FaRegCalendarAlt style={{marginRight: 4, verticalAlign: 'middle'}} />August 3, 2020</span>
+                <span>August 3, 2020</span>
                 <span className={styles.dot}>•</span>
-                <span><FaRegClock style={{marginRight: 4, verticalAlign: 'middle'}} />4 min read</span>
-                <span className={styles.shareLabel}>Share:</span>
-                <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}><FaFacebookF /></a>
-                <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}><FaTwitter /></a>
-                <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}><FaLinkedinIn /></a>
-                <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}><FaYoutube /></a>
-                <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}><FaTelegramPlane /></a>
+                <span>4 min read</span>
+                <span className={styles.metaShareGroup}>
+                  <span className={styles.shareLabel}>Share:</span>
+                  <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}> <FaFacebookF /></a>
+                  <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}> <FaTwitter /></a>
+                  <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}> <FaLinkedinIn /></a>
+                  <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}> <FaYoutube /></a>
+                  <a href="#" className={styles.socialIcon} onClick={e => {e.preventDefault(); navigate('/under-construction');}}> <FaTelegramPlane /></a>
+                </span>
               </div>
             </div>
             <div className={styles.mainImageWrapper}>
               <img src="/images/blog/article2.jpg" alt="Main post visual" className={styles.mainImage} />
             </div>
             <div className={styles.articleContent}>
-              <p className={styles.lead}>The sharp consequences of the struggle lead to the fact that the mattis pellentesque dui odio. The interdum aenean sits in the malesuada ornare sed gravida rhoncus, congue. The author's pure auctor nullam diam quis est hendrerit ac euismod.</p>
-              <p>At the facility, the sapien position gets the nunc senectus proin nullam. The tortor senectus in et sagittis, vitae diam cras dignissim. Various adipiscing get diam nisi. Orci, consectetur vulputate metus ornare pharetra, neque, fermentum. Vel nec rhoncus, non nunc, neque in massa. Feugiat leo nam nisi lacinia amet, odio. Mi varius viverra risus vel.</p>
-              <p>Amet, morbi sed pharetra, elit get mi potenti. Condimentum orci interdum feugiat lectus libero duis. Nisl massa, elementum varius sit. Nunc felis, porttitor aliquam urna, accumsan et sed. Aliquet non sed duis diam vehicula rhoncus. In dictum nullam tincidunt semper pellentesque purus morbi sed. Ut aliquet velit pharetra, nisi nunc, non.</p>
+              <p className={styles.lead}>The rapid evolution of the job market has led to significant changes in how companies approach recruitment and talent management. The integration of new technologies and methodologies has transformed traditional hiring practices, creating both challenges and opportunities for HR professionals. The author's extensive research and industry experience provide valuable insights into these developments.</p>
+              <p>In today's workplace, the role of HR has evolved beyond traditional administrative functions. The modern HR professional must navigate complex organizational structures while implementing innovative recruitment strategies. Various technological solutions have emerged to streamline these processes. From AI-powered screening tools to advanced analytics platforms, these innovations are reshaping how companies identify and attract top talent. The impact of these changes extends across all levels of the organization.</p>
+              <p>Companies are increasingly recognizing the importance of data-driven decision making in HR. Modern recruitment tools provide powerful insights into candidate performance and potential. The integration of these tools requires careful consideration of both technical and human factors. Organizations must balance efficiency gains with maintaining a personal touch in the hiring process. This delicate balance is crucial for building strong, sustainable teams.</p>
               <blockquote className={styles.quoteFigma}>
                 <span className={styles.quoteIconFigma}>❝</span>
                 <span>
-                  The pain itself is important to the main adipisicing elite. Just as the pain of the lecture is the result of the fermentation of the pain, the pain is the result of the pain. The pain is the result of the pain. The pain is the result of the pain. The pain is the result of the pain. The pain is the result of the pain. The pain is the result of the pain.
+                  The future of HR lies in the successful integration of technology and human expertise. While automation can streamline many processes, the human element remains crucial in understanding candidate potential and cultural fit. The most successful organizations will be those that can effectively combine data-driven insights with human judgment to make better hiring decisions.
                 </span>
               </blockquote>
-              <p>Mauris amet arcu nisl vel dictum tellus. Sed rhoncus, ut sed id ut erat mattis. Vitae mus blandit in neque amet non fringilla blandit:</p>
+              <p>Key considerations for modern HR professionals include:</p>
               <ul className={styles.checkListFigma}>
-                <li><span className={styles.checkIcon}>✔</span>The pain itself is important to the main adipisicing elite.</li>
-                <li><span className={styles.checkIcon}>✔</span>The pain is the result of the pain.</li>
-                <li><span className={styles.checkIcon}>✔</span>The pain is the result of the pain.</li>
-                <li><span className={styles.checkIcon}>✔</span>The pain is the result of the pain.</li>
+                <li><span className={styles.checkIcon}>✔</span>Implementing data-driven recruitment strategies</li>
+                <li><span className={styles.checkIcon}>✔</span>Leveraging AI and automation tools effectively</li>
+                <li><span className={styles.checkIcon}>✔</span>Maintaining human connection in the digital age</li>
+                <li><span className={styles.checkIcon}>✔</span>Developing comprehensive talent management systems</li>
               </ul>
-              <p>Blandit massa gravida feugiat elementum id nec sed leo. Nisi in ornare lectus eget. Urna, risus, consectetur volutpat lorem purus. Velit aliquet nibh vitae maecenas. Consectetur neque ut aliquam eros, purus enim dignissim aenean vitae. Ultrices fames augue mattis tortor est justo, pharetra nibh risus. Facilisi at porttitor volutpat natoque proin amet, nulla. Vivamus ut lobortis sagittis curabitur tellus convallis eget netus vitae.</p>
+              <p>The landscape of HR and recruitment continues to evolve rapidly. Organizations must stay informed about emerging trends and technologies while maintaining focus on their core mission of finding and developing the best talent. By combining traditional HR expertise with modern tools and methodologies, companies can build stronger, more effective teams. The key to success lies in finding the right balance between technological innovation and human insight.</p>
               <div className={styles.tagsShareRowFigma}>
                 <div className={styles.tagsLabel}>Tags:</div>
                 <div className={styles.tagsBox}>
