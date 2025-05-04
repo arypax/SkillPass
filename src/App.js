@@ -15,14 +15,13 @@ import SinglePost from './pages/SinglePost';
 import Course from './pages/Course';
 import CourseContent from './pages/CourseContent';
 import Test from './pages/Test';
-import Login from './pages/Login';
 import { auth } from './firebase/config';
 import './App.css';
 
 // Защищенный маршрут
 const ProtectedRoute = ({ children }) => {
   if (!auth.currentUser) {
-    return <Navigate to="/login" />;
+    return null;
   }
   return children;
 };
@@ -39,15 +38,14 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/about" element={<About />} />
             <Route path="/courses" element={<Courses />} />
-            <Route path="/course/:id" element={<Course />} />
+            <Route path="/course/:id" element={<Course onAuthOpen={() => setAuthOpen(true)} />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/events-grid" element={<EventsGrid />} />
             <Route path="/event" element={<Event />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/under-construction" element={<UnderConstruction />} />
             <Route path="/single-post" element={<SinglePost />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/course" element={<Course />} />
+            <Route path="/course" element={<Course onAuthOpen={() => setAuthOpen(true)} />} />
             <Route
               path="/course-content"
               element={

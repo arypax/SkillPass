@@ -3,15 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import { auth, db } from '../firebase/config';
 import { doc, setDoc } from 'firebase/firestore';
 import styles from './Course.module.css';
+import AuthModal from '../components/AuthModal';
 
 function Course() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   const handleJoinCourse = async () => {
     if (!auth.currentUser) {
-      // Если пользователь не авторизован, перенаправляем на страницу входа
-      navigate('/login');
+      setIsAuthModalOpen(true);
       return;
     }
 
@@ -39,6 +40,7 @@ function Course() {
 
   return (
     <div className={styles.wrapper}>
+      <AuthModal isOpen={isAuthModalOpen} onClose={() => setIsAuthModalOpen(false)} />
       <div className={styles.hero}>
         <div className={styles.courseLabel}>COURSE</div>
         <h1 className={styles.title}>User Experience. Principles of Human-Centered Design</h1>

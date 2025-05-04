@@ -7,8 +7,6 @@ export const generateCertificate = (userName, courseName, completionDate) => {
     format: 'a4'
   });
 
-  // Добавляем фоновое изображение (можно добавить позже)
-  // doc.addImage(backgroundImage, 'PNG', 0, 0, 297, 210);
 
   // Настройка шрифтов
   doc.setFont('helvetica', 'bold');

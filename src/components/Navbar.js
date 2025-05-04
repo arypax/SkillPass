@@ -101,10 +101,10 @@ const Navbar = ({ onAuthOpen }) => {
             )}
           </div>
         ) : (
-          <button type="button" className={styles.authLink} onClick={onAuthOpen}>
-            <FaUser />
-            <span>Log in / Register</span>
-          </button>
+        <button type="button" className={styles.authLink} onClick={onAuthOpen}>
+          <FaUser />
+          <span>Log in / Register</span>
+        </button>
         )}
       </div>
     </nav>
